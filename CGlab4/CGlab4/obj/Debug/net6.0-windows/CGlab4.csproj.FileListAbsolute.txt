@@ -1,0 +1,17 @@
+D:\VisualStudio\repos\CGlab4\CGlab4\bin\Debug\net6.0-windows\CGlab4.exe
+D:\VisualStudio\repos\CGlab4\CGlab4\bin\Debug\net6.0-windows\CGlab4.deps.json
+D:\VisualStudio\repos\CGlab4\CGlab4\bin\Debug\net6.0-windows\CGlab4.runtimeconfig.json
+D:\VisualStudio\repos\CGlab4\CGlab4\bin\Debug\net6.0-windows\CGlab4.dll
+D:\VisualStudio\repos\CGlab4\CGlab4\bin\Debug\net6.0-windows\ref\CGlab4.dll
+D:\VisualStudio\repos\CGlab4\CGlab4\bin\Debug\net6.0-windows\CGlab4.pdb
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.csproj.AssemblyReference.cache
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.Form1.resources
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.csproj.GenerateResource.cache
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.GeneratedMSBuildEditorConfig.editorconfig
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.AssemblyInfoInputs.cache
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.AssemblyInfo.cs
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.csproj.CoreCompileInputs.cache
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.dll
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\ref\CGlab4.dll
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.pdb
+D:\VisualStudio\repos\CGlab4\CGlab4\obj\Debug\net6.0-windows\CGlab4.genruntimeconfig.cache
