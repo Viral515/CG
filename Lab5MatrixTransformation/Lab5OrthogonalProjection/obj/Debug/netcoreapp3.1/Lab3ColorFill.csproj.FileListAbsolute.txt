@@ -1,0 +1,16 @@
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab3ColorFill.exe
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab3ColorFill.deps.json
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab3ColorFill.runtimeconfig.json
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab3ColorFill.runtimeconfig.dev.json
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab3ColorFill.dll
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab3ColorFill.pdb
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.csproj.GenerateResource.cache
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.AssemblyInfoInputs.cache
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.AssemblyInfo.cs
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.csproj.CoreCompileInputs.cache
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.dll
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.pdb
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.genruntimeconfig.cache
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.MainForm.resources
+C:\Users\zombi\source\dev\computerGraphics\Lab3ColorFill\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab3ColorFill.csproj.AssemblyReference.cache

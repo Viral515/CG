@@ -1,0 +1,16 @@
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab2VectorsAndCircles.exe
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab2VectorsAndCircles.deps.json
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab2VectorsAndCircles.runtimeconfig.json
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab2VectorsAndCircles.runtimeconfig.dev.json
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab2VectorsAndCircles.dll
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\bin\Debug\netcoreapp3.1\Lab2VectorsAndCircles.pdb
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.csproj.AssemblyReference.cache
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.MainForm.resources
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.csproj.GenerateResource.cache
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.AssemblyInfoInputs.cache
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.AssemblyInfo.cs
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.csproj.CoreCompileInputs.cache
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.dll
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.pdb
+C:\Users\zombi\source\dev\computerGraphics\Lab2VectorsAndCircles\Lab2VectorsAndCircles\obj\Debug\netcoreapp3.1\Lab2VectorsAndCircles.genruntimeconfig.cache
