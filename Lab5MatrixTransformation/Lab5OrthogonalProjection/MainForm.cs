@@ -165,7 +165,10 @@ namespace Lab5OrthogonalProjection
 			Pen pen = new Pen(newColor, lineSize);
 			Graphics graphic = Graphics.FromImage(PictureBox.Image);
 
-			graphic.DrawLines(pen, points);
+			for (int i = 0; i < vertexCount - 1; i++)
+            {
+				graphic.DrawLine(pen, points[i], points[i + 1]);
+            }
 		}
 
 		private void TimerButton_Click(object sender, EventArgs e)
