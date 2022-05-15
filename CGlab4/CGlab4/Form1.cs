@@ -2,26 +2,36 @@ namespace CGlab4
 {
     public partial class Form1 : Form
     {
-        public float[,] kv = new float[4, 3]; // матрица тела
-        public float[,] osi = new float[4, 3]; // матрица координат осей
-        public float[,] fig = new float[4, 3]; // матрица координат осей
-        public float[,] matr_sdv = new float[3, 3]; //матрица преобразования
-        public float k, l, k2, l2; // элементы матрицы сдвига k2 и l2 - для сдвига осей
-        public bool f = true; //переменная для функции непрерывного сдвига
+        public float[,] kv = new float[4, 3]; 
+        public float[,] osi = new float[4, 3];
+        public float[,] fig = new float[4, 3]; 
+        public float[,] matr_sdv = new float[3, 3]; 
+        public float k, l, k2, l2;
+        public bool f = true; 
         public float algoritm = 0;
         public float scaleX = 1;
         public float scaleY = 1;
         public float rotateX = 0;
         public float rotateY = 0;
+        public float newRotateX, newRotateY, newScaleX, newScaleY;
         public Color color = Color.Blue;
         public int width = 2;
+
+
+        public int x, y;
+
+        public float[,] mat1 = new float[3, 3];
+        public float[,] mat2 = new float[3, 3];
+        public float[,] rotateMatr = new float[3, 3];
 
         public Form1()
         {
             InitializeComponent();
+            k = pictureBox1.Width / 2;
+            l = pictureBox1.Height / 2;
         }
 
-        //инициализация матрицы тела
+
         private void Init_kvadrat()
         {
             kv[0, 0] = -50; kv[0, 1] = 0; kv[0, 2] = 1;
@@ -33,9 +43,9 @@ namespace CGlab4
         //инициализация матрицы сдвига
         private void Init_matr_preob(float k1, float l1)
         {
-            matr_sdv[0, 0] = scaleX; matr_sdv[0, 1] = rotateX; matr_sdv[0, 2] = 0;
-            matr_sdv[1, 0] = rotateY; matr_sdv[1, 1] = scaleY; matr_sdv[1, 2] = 0;
-            matr_sdv[2, 0] = k1; matr_sdv[2, 1] = l1; matr_sdv[2, 2] = 1;
+            matr_sdv[0, 0] = scaleX;  matr_sdv[0, 1] = rotateX; matr_sdv[0, 2] = 0;
+            matr_sdv[1, 0] = rotateY; matr_sdv[1, 1] = scaleY;  matr_sdv[1, 2] = 0;
+            matr_sdv[2, 0] = k1;      matr_sdv[2, 1] = l1;      matr_sdv[2, 2] = 1;
         }
 
         //инициализация матрицы осей
@@ -82,43 +92,61 @@ namespace CGlab4
             Init_osi();
             Init_matr_preob(k2, l2);
             float[,] osi1 = Multiply_matr(osi, matr_sdv);
-            Pen myPen = new Pen(Color.Red, 1);// цвет линии и ширина
+            Pen myPen = new Pen(Color.Red, 1);
             Graphics g = Graphics.FromHwnd(pictureBox1.Handle);
-            // рисуем ось ОХ
-            g.DrawLine(myPen, osi1[0, 0], osi1[0, 1], osi1[1, 0], osi1[1,
-            1]);
-            // рисуем ось ОУ
-            g.DrawLine(myPen, osi1[2, 0], osi1[2, 1], osi1[3, 0], osi1[3,
-            1]);
+            g.DrawLine(myPen, osi1[0, 0], osi1[0, 1], osi1[1, 0], osi1[1, 1]);
+            g.DrawLine(myPen, osi1[2, 0], osi1[2, 1], osi1[3, 0], osi1[3, 1]);
             g.Dispose();
             myPen.Dispose();
         }
 
-        //вывод квадрата на экран
         private void Draw_Kv()
         {
             pictureBox1.Image = null;
             pictureBox1.Update();
             Draw_osi();
-            Init_kvadrat(); //инициализация матрицы тела
-            Init_matr_preob(k, l); //инициализация матрицы преобразования
-            float[,] kv1 = Multiply_matr(kv, matr_sdv); //перемножение матриц
+            Init_kvadrat(); 
+            Init_matr_preob(k, l); 
+            float[,] kv1 = Multiply_matr(kv, matr_sdv);
 
-            Pen myPen = new Pen(color, width);// цвет линии и ширина
+            Pen myPen = new Pen(color, width);
 
-            //создаем новый объект Graphics (поверхность рисования) из pictureBox
+            
             Graphics g = Graphics.FromHwnd(pictureBox1.Handle);
-            // рисуем 1 сторону квадрата
+            
             g.DrawLine(myPen, kv1[0, 0], kv1[0, 1], kv1[1, 0], kv1[1, 1]);
-            // рисуем 2 сторону квадрата
+            
             g.DrawLine(myPen, kv1[1, 0], kv1[1, 1], kv1[2, 0], kv1[2, 1]);
-            // рисуем 3 сторону квадрата
+            
             g.DrawLine(myPen, kv1[2, 0], kv1[2, 1], kv1[3, 0], kv1[3, 1]);
-            // рисуем 4 сторону квадрата
+            
             g.DrawLine(myPen, kv1[3, 0], kv1[3, 1], kv1[0, 0], kv1[0, 1]);
-            g.Dispose();// освобождаем все ресурсы, связанные с отрисовкой
-            myPen.Dispose(); //освобождвем ресурсы, связанные с Pen
+            g.Dispose();
+            myPen.Dispose(); 
 
+        }
+
+
+        private void Init_mat1()
+        {
+            mat1[0, 0] = 1;  mat1[0, 1] = 0;  mat1[0, 2] = 0;
+            mat1[1, 0] = 0;  mat1[1, 1] = 1;  mat1[1, 2] = 0;
+            mat1[2, 0] = -k; mat1[2, 1] = -l; mat1[2, 2] = 1;
+        }
+
+
+        private void Init_mat2()
+        {
+            mat2[0, 0] = 1;  mat2[0, 1] = 0;  mat2[0, 2] = 0;
+            mat2[1, 0] = 0;  mat2[1, 1] = 1;  mat2[1, 2] = 0;
+            mat2[2, 0] = k; mat2[2, 1] = l; mat2[2, 2] = 1;
+        }
+
+        private void Init_rotateMatr()
+        {
+            rotateMatr[0, 0] = newScaleX;  rotateMatr[0, 1] = newRotateX; rotateMatr[0, 2] = 0;
+            rotateMatr[1, 0] = newRotateY; rotateMatr[1, 1] = newScaleY;  rotateMatr[1, 2] = 0;
+            rotateMatr[2, 0] = 0;          rotateMatr[2, 1] = 0;          rotateMatr[2, 2] = 1;
         }
 
         private void Draw_Fig()
@@ -126,33 +154,54 @@ namespace CGlab4
             pictureBox1.Image = null;
             pictureBox1.Update();
             Draw_osi();
-            Init_Figure(); //инициализация матрицы тела
-            Init_matr_preob(k, l); //инициализация матрицы преобразования
-            float[,] fig1 = Multiply_matr(fig, matr_sdv); //перемножение матриц
+            Init_Figure();
+            Init_matr_preob(k, l);
+            float[,] fig1 = Multiply_matr(fig, matr_sdv);
 
-            Pen myPen = new Pen(color, width);// цвет линии и ширина
+            Init_mat1();
+            fig1 = Multiply_matr(fig1, mat1);
+            Init_rotateMatr();
+            fig1 = Multiply_matr(fig1, rotateMatr);
+            Init_mat2();
+            fig1 = Multiply_matr(fig1, mat2);
 
-            //создаем новый объект Graphics (поверхность рисования) из pictureBox
+            Pen myPen = new Pen(color, width);
+
+            
             Graphics g = Graphics.FromHwnd(pictureBox1.Handle);
-            // рисуем 1 сторону квадрата
+           
             g.DrawLine(myPen, fig1[0, 0], fig1[0, 1], fig1[1, 0], fig1[1, 1]);
-            // рисуем 2 сторону квадрата
+            
             g.DrawLine(myPen, fig1[1, 0], fig1[1, 1], fig1[2, 0], fig1[2, 1]);
-            // рисуем 3 сторону квадрата
+            
             g.DrawLine(myPen, fig1[2, 0], fig1[2, 1], fig1[3, 0], fig1[3, 1]);
-            // рисуем 4 сторону квадрата
+           
             g.DrawLine(myPen, fig1[3, 0], fig1[3, 1], fig1[0, 0], fig1[0, 1]);
-            g.Dispose();// освобождаем все ресурсы, связанные с отрисовкой
-            myPen.Dispose(); //освобождвем ресурсы, связанные с Pen
+            g.Dispose();
+            myPen.Dispose(); 
         }
 
-        //Нарисовать квадрат по центру
+        public void DrawString(string drawString)
+        {
+            using (Graphics g = pictureBox1.CreateGraphics())
+            {
+                g.Clear(Color.White);
+                Font font = new Font("Courier New", 16);
+                float sizeX = g.MeasureString(drawString, font).Width / 2;
+                float sizeY = g.MeasureString(drawString, font).Height / 2;
+
+                g.TranslateTransform(x + sizeX, y + sizeY);
+                g.RotateTransform(int.Parse(textBox2.Text));
+                g.DrawString(drawString, font, new SolidBrush(Color.Red), new Point(0 - (int)sizeX, 0 - (int)sizeY));
+            }
+        }
+
+        //Нарисовать фигуру по центру
         private void button2_Click(object sender, EventArgs e)
         {
             //середина pictureBox
             k = pictureBox1.Width / 2;
             l = pictureBox1.Height / 2;
-            //вывод квадратика в середине
             if (radioButton5.Checked == true)
             {
                 Draw_Kv();
@@ -163,7 +212,15 @@ namespace CGlab4
                 {
                     Draw_Fig();
                 }
+                else
+                {
+                    if (radioButton7.Checked == true)
+                    {
+                        DrawString(textBox4.Text);
+                    }
+                }
             }
+
         }
 
         //Нарисовать оси
@@ -261,6 +318,7 @@ namespace CGlab4
                     Draw_Fig();
                 }
             }
+
             Thread.Sleep(100);
         }
 
@@ -315,10 +373,10 @@ namespace CGlab4
         private void button11_Click(object sender, EventArgs e)
         {
             float a = (float)(double.Parse(textBox2.Text) * Math.PI / 180);
-            //scaleX = (float)Math.Cos(a);
-            //scaleY = (float)Math.Cos(a);
-            rotateX = -(float)Math.Sin(a);
-            rotateY = (float)Math.Sin(a);
+            newScaleX = (float)Math.Cos(a);
+            newScaleY = (float)Math.Cos(a);
+            newRotateX = -(float)Math.Sin(a);
+            newRotateY = (float)Math.Sin(a);
             if (radioButton5.Checked == true)
             {
                 Draw_Kv();
@@ -330,6 +388,17 @@ namespace CGlab4
                     Draw_Fig();
                 }
             }
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            x = e.X;
+            y = e.Y;
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
         }
 
         private void Form1_Load(object sender, EventArgs e)
